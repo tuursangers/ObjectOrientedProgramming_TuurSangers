@@ -38,3 +38,22 @@ Executables
 *.app
 
 Other* .ipch* .db* .suo*
+*.ipch
+
+*.log
+
+*.tlog
+
+*.pdb
+
+*.vcxproj
+
+*.filters
+
+*.user
+
+*.idb
+
+Les01/\.vs/Les01/v15/\.suo
+
+*.db
