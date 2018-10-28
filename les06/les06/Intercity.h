@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Vervoermiddel.h"
+#include "Trein.h"
 
-class Intercity : public Vervoermiddel {
+class Intercity : public Trein {
 public:
-	Intercity(int coupes);
+	Intercity(int c, float km);
 
-private:
-	int capaciteit = 0;
+	float ticketPrijs() override;
+	float opbrengst() override;
 };

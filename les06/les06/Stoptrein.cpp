@@ -2,21 +2,26 @@
 
 
 
-Stoptrein::Stoptrein(int coupes)
+Stoptrein::Stoptrein(int c, float km)
 {
-	capaciteit = 150 * coupes;
+	capaciteit = 150 * c;
+	kmTraject = km;
+}
+
+float Stoptrein::ticketPrijs() {
+	float prijs;
+
+	prijs = kmTraject * prijsPerKilometer;
+
+	return prijs;
 }
 
 
-Stoptrein::~Stoptrein()
-{
-}
-
-float Vervoermiddel::opbrengst(float kilometers)
+float Stoptrein::opbrengst()
 {
 	float opbrengst;
 
-	opbrengst = capaciteit * (prijsPerKilometer * kilometers);
+	opbrengst = capaciteit * ticketPrijs();
 
 	return opbrengst;
 }

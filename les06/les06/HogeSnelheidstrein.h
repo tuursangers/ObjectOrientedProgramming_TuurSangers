@@ -2,11 +2,14 @@
 
 #include "Trein.h"
 
-class Stoptrein : public Trein {
+
+class HogeSnelheidstrein : public Trein {
 public:
-	Stoptrein(int c, float km);
+	HogeSnelheidstrein();
 
 	float ticketPrijs() override;
 	float opbrengst() override;
-	
+
+	float toeslag = 5.00;
+
 };

@@ -2,21 +2,27 @@
 
 
 
-Intercity::Intercity(int coupes)
+Intercity::Intercity(int c, float km)
 {
-	capaciteit = 300 * coupes;
+	capaciteit = 150 * c;
+	kmTraject = km;
+}
+
+float Intercity::ticketPrijs() {
+	float prijs;
+
+	prijs = kmTraject * prijsPerKilometer;
+
+	return prijs;
 }
 
 
-Intercity::~Intercity()
-{
-}
-
-float Vervoermiddel::opbrengst(float kilometers)
+float Intercity::opbrengst()
 {
 	float opbrengst;
 
-	opbrengst = capaciteit * (prijsPerKilometer * kilometers);
+	opbrengst = capaciteit * ticketPrijs();
 
 	return opbrengst;
 }
+

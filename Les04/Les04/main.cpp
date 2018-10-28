@@ -29,10 +29,18 @@ int main() {
 	in_stream.clear();
 	in_stream.seekg(0);
 
-	for (int a = streamLenght; a != 0; a = a - 1) {
+	for (int a = streamLenght-2; a != 0; a = a - 1) {
 		char ch;
 		in_stream.seekg(a);
 		in_stream.get(ch);
+		/*
+		if (ch == '\n') {
+			data += "!";
+		}
+		else {
+			data += ch;
+		}
+		*/
 		data += ch;
 	}
 
